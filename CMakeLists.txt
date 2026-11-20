@@ -208,6 +208,7 @@ else()
     else()
         set(CMAKE_CXX_FLAGS_RELEASE "${WARN_FLAGS} -fPIC -O3 -g -pipe")
     endif()
+    add_compile_options(-ffp-contract=off)
 endif()
 
 set(boost_libs program_options iostreams)
